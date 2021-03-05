@@ -42,6 +42,8 @@ for lang in languages:
 			localdict["code"+str(m)]=data[int(i)-1]
 			m += 1
 		dict[str(lang)] = localdict
+		with open('jdata.json', 'w') as fp:
+    			json.dump(dict, fp)
 		os.system('cls' if os.name ==  'nt' else 'clear')	
 
 pprint.pprint(dict)
